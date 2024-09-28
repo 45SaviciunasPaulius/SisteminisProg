@@ -1,0 +1,24 @@
+#include <string>
+#include <vector>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <sstream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+using std::setprecision;
+using std::string;
+using std::swap;
+using std::ostream;
+using std::istream;
+using std::vector;
+using std::setw;
+using std::left;
+using std::internal;
+using std::right;
+using std::ofstream;
+using std::ifstream;
+using std::getline;
+using std::stringstream;
