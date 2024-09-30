@@ -64,7 +64,7 @@ Studentai::~Studentai() {
 		return a;
 
 	}
-	s
+	
 ostream& operator << (ostream& out, Studentai& c) {
 	out << setw(15) << left << c.Vardas;
 	out << setw(18) << left  << c.Pavarde;
