@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <fstream>
 #include <sstream>
+#include <limits>
 
 using std::cout;
 using std::cin;
@@ -22,3 +23,5 @@ using std::ofstream;
 using std::ifstream;
 using std::getline;
 using std::stringstream;
+using std::streamsize;
+using std::numeric_limits;

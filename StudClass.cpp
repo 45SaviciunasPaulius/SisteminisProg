@@ -54,10 +54,17 @@ Studentai::~Studentai() {
 				}
 			}
 		}
-		return _paz[_paz.size()/2];
+		double a;
+		if ((_paz.size() / 2) % 2 != 0)a = _paz[_paz.size() / 2];
+		else {
+			a = ((_paz[_paz.size() / 2]) + ((_paz[_paz.size() / 2]) - 1)) / 2;
+		}
+
+
+		return a;
 
 	}
-
+	s
 ostream& operator << (ostream& out, Studentai& c) {
 	out << setw(15) << left << c.Vardas;
 	out << setw(18) << left  << c.Pavarde;
@@ -73,18 +80,31 @@ istream& operator >> (istream& in, Studentai& c){
 	in >> c.Pavarde;
 	cout << "Kiek Buvo namų darbų?:(0 jei nežinote) " << endl;
 	in >> c.n;
-	cout << "Įveskite pažymius(0 jei norite baigti): " << endl;
+
 	int a;
-	if (c.n > 0) {
+
+	 if (c.n == 0) {
+		cout << "Įveskite pažymius!(0 jei norite baigti)" << endl;
+		do {
+			in >> a;
+			c.Paz.push_back(a);
+		} while (a > 0);
+	}
+
+	else if (c.n > 0) {
+		cout << "Įveskite pažymius!(0 jei norite, kad būtu sugeneruojami atsitiktinai)" << endl;
 		for (int i = 0; i < c.n; i++) {
 			in >> a;
-			c.Paz.push_back(a);
+			if (a == 0) {
+				cout << "Pažymiai sugeneruoti!" << endl;
+				for (int i = 0; i < c.n; i++) {
+					c.Paz.push_back(rand() % 11);
+				}
+				break;
+			}
+			else c.Paz.push_back(a);
 		}
 	}
-	else do {
-			in >> a;
-			c.Paz.push_back(a);
-	} while(a > 0);
 
 	cout << "Įveskite egzamino rezultata: " << endl;
 	in >> c.egz;

@@ -4,8 +4,9 @@
 int main() {
 	vector<Studentai> stud;
 	Studentai Jonas;
-	Studentai Virgis("Virgis", "Virgutis", { 10,9,8,7,4 }, 4, 9);
+	Studentai Virgis("Virgis", "Virgutis", { 10,9,8,7,4 }, 5, 9);
 	Studentai Paulius;
+	cin >> Paulius;
 
 
 	////Skaitymas iš failo.
