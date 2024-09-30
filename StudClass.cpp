@@ -98,7 +98,7 @@ istream& operator >> (istream& in, Studentai& c){
 			if (a == 0) {
 				cout << "Pažymiai sugeneruoti!" << endl;
 				for (int i = 0; i < c.n; i++) {
-					c.Paz.push_back(rand() % 11);
+					c.Paz.push_back((rand() % 10)+1);
 				}
 				break;
 			}
