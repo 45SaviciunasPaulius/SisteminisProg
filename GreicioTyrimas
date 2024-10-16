@@ -1,0 +1,26 @@
+Dirbant su 10000 duomenų:
+
+Failų sukurimas užtruko: 0.0006901 sekundės.
+Duomenų nuskaitymas užtruko: 0.0471961 sekundės.
+Studentu surušiavimas ir išvedimas užtruko: 0.0167767 sekundės.
+
+iš viso: 0.0639728 sekundės.
+--------------------------------------------------------------------------------
+
+Dirbant su 100000 duomenų:
+
+Failų sukurimas užtruko: 0.0006443 sekundės.
+Duomenų nuskaitymas užtruko: 0.545715 sekundės.
+Studentu surušiavimas ir išvedimas užtruko: 0.153916 sekundės.
+
+iš viso: 0.699631 sekundės.
+
+--------------------------------------------------------------------------------
+
+Dirbant su 1000000 duomenų:
+
+Failų sukurimas užtruko: 0.0007263 sekundės.
+Duomenų nuskaitymas užtruko: 4.27373 sekundės.
+Studentu surušiavimas ir išvedimas užtruko: 1.55854 sekundės.
+
+iš viso: 5.8329963 sekundės.
