@@ -98,7 +98,7 @@ istream& operator >> (istream& in, Studentai& c){
 			if (a == 0) {
 				cout << "Pažymiai sugeneruoti!" << endl;
 				for (int i = 0; i < c.n; i++) {
-					c.Paz.push_back((rand() % 10)+1);
+					c.Paz.push_back(rand() % 11);
 				}
 				break;
 			}
@@ -110,4 +110,58 @@ istream& operator >> (istream& in, Studentai& c){
 	in >> c.egz;
 	
 	return in;
+}
+
+void Skaitymas(string file) {
+	bool FLine = true;
+	ifstream fd(file);
+	ofstream Moks("Moksliukai.txt");
+	ofstream Nemoks("Nemoksos.txt");
+
+
+	vector<double> paz;
+	paz.reserve(100);
+	string line, word;
+	stringstream ss;
+
+	while (getline(fd, line)) {
+		ss.clear();
+		ss.str(line);
+
+		if (FLine == true) {
+			Moks << "Vardas" << setw(20) << "Pavardė" << setw(45) << "Galutinis(Vid) /  Galutinis (Med.)" << endl;
+			Nemoks << "Vardas" << setw(20) << "Pavardė" << setw(45) << "Galutinis(Vid) /  Galutinis (Med.)" << endl;
+		}
+
+		if (FLine == false) {
+			vector<string> words;
+			while (ss >> word) {
+				words.push_back(word);
+			}
+			paz.clear();
+			int egzaminas = stoi(words.back());
+
+			for (int i = 2; i < words.size() - 2; i++) {
+				paz.push_back(stoi(words[i]));
+			}
+
+			Studentai a(words[0], words[1], paz, paz.size(), egzaminas);
+			double galutinis = a.Galutinis(paz);
+			double mediana = a.Mediana(paz);
+
+			if (galutinis >= 5) {
+				Moks << setw(15) << left << words[0];
+				Moks << setw(18) << left << words[1];
+				Moks << setw(18) << setprecision(3) << galutinis;
+				Moks << setprecision(3) << mediana << '\n';
+			}
+			else {
+				Nemoks << setw(15) << left << words[0];
+				Nemoks << setw(18) << left << words[1];
+				Nemoks << setw(18) << setprecision(3) << galutinis;
+				Nemoks << setprecision(3) << mediana << '\n';
+			}
+		}
+		else FLine = false;
+	}
 }

@@ -21,8 +21,11 @@ public:
 	double Galutinis(vector<double>);
 
 	double Mediana(vector<double>);
+
 };
 
 ostream& operator << (ostream&, const Studentai&);
 
 istream& operator >> (istream& , Studentai&);
+
+void Skaitymas(string);
