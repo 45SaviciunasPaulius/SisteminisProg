@@ -1,6 +1,7 @@
 # SisteminisProg
 
 **Realese'as v0.1**
+
 Pirma programos versija.
 Viena iš sudetingiausių ir daugiausiai laiko užėmusių užduočiu, nes reikėjo viską programos pagrindą sukurti šioje versijoje.
 
@@ -14,12 +15,13 @@ Tolimėsnės versijos palaiko tokį pat principa tik yra patobulinimu.
 be to. Nėra exeption handling. Bandžiau domėtis savarankiškai kaip tai reikai pritaikyti, bet iškilo sunkumų.
 
 **Realese'as v0.2**
+
 Svarbiausias šio realese'o uždavinys buvo didelių failų skaitymas ir analizavimas. Ankstesnėje versijoje failų skaitymas buvo labai lėtas, programa negalėjo susidoroti su 10000 duomenų failais. Tyrimus reikėjo atlikti su 10000, 100000 ir 1000000 duomenų failais. 
 Patobulinau duomenų skaityma naudojant stringstream klasės objektą ir ištestavau programos greitį.
 
 Rezultatai: 
 
-irbant su **10000** duomenų:
+dirbant su **10000** duomenų:
 
 Failų sukurimas užtruko: 0.0006901 sekundės.
 Duomenų nuskaitymas užtruko: 0.0471961 sekundės.
@@ -47,6 +49,7 @@ Studentu surušiavimas ir išvedimas užtruko: 1.55854 sekundės.
 iš viso: **5.8329963 sekundės.**
 
 **Realese'as v1.0**
+
 Pagrindinė šio Realese'o užduotis buvo ištestuoti programos veikimo greitį pagal 2 strategijas naudojant skirtingus konteinerius: **std::vector, std::list, std::deque**
 Tyrimas buvo atliktas pusiau, bei buvo optimizuota failų skaitymo funkcija: 
 
