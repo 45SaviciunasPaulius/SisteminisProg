@@ -22,7 +22,12 @@ Naujų failų sukūrimas: 0,0007492 sekundės.
 
 2 Strategija: 
 
-Dabartinė funkcija išskaido failą eilutėmis ir iš eilučiu duomenų atlieka priskirtus veiksmus (atskiria vardas/pavarde, atrenka pažymius ir egzaminą.) ir išskaido į du atskirus failus bei konteinerius. Norint išskaidyt "vargšiukus" ir palikti "kietiakus" pradiniame konteinerį aš turėčiau perkurti visą funkciją, kad apskaičiuoti duomenys būtų supilti į vieną konteinerį ir iš jo atrinkti duomenys būtų perkelti į "varkšiukus" ir ištrinti iš kietiakų. Matau, kad programa veiks lėčiau nes visi duomenys bus supilti į vieną, ir iš ten skaidomi ir trinami papildomai. Esu užtikrintas, kad programa veiks lėčiau. Be to bandžiau aš įvykdyti šią užduotį. Bandžiau naudoti std::find , kad surasti elementą kurį reiks ištrinti ir jį idėti į vector::erase metodą, bet prorama mėtė neaiškų errorą. pridedu kodo dalį.
+Dabartinė funkcija išskaido failą eilutėmis ir iš eilučiu duomenų atlieka priskirtus veiksmus (atskiria vardas/pavarde, atrenka pažymius ir egzaminą.) ir išskaido
+į du atskirus failus bei konteinerius. Norint išskaidyt "vargšiukus" ir palikti "kietiakus" pradiniame konteinerį aš turėčiau perkurti visą funkciją, kad
+apskaičiuoti duomenys būtų supilti į vieną konteinerį ir iš jo atrinkti duomenys būtų perkelti į "varkšiukus" ir ištrinti iš kietiakų. Matau, kad programa veiks
+lėčiau nes visi duomenys bus supilti į vieną, ir iš ten skaidomi ir trinami papildomai. Esu užtikrintas, kad programa veiks lėčiau. Be to bandžiau aš įvykdyti šią
+užduotį. Bandžiau naudoti std::find , kad surasti elementą kurį reiks ištrinti ir jį idėti į vector::erase metodą, bet prorama mėtė neaiškų errorą. pridedu kodo
+dalį.
 
 vargsiukai.push_back(a);
 auto it = std::find(kietiakai.begin(), kietiakai.end(),a);
