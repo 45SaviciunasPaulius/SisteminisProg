@@ -1,0 +1,23 @@
+1 Strategija(Mano programa turimus duomenis surenka ir išskaido į eilutes kurios atsiduria stringstream objekte. duomenys tuo metu yra apdirbami funkcijų ir išskaidomi į du atskirus failus.): 
+
+Testas atliktas naudojant 1000000 duomenų.
+
+std::vector: 
+
+duomenų nuskaitymą iš failų: 4.27373 sekundės.
+studentų rūšiavimą į dvi grupes/kategorijas: 1.55854 sekundės.
+Naujų failų sukūrimą: 0.0007263 sekundės.
+
+std::list:
+
+Duomenų nuskaitymas iš failų: 4,54253 sekundės.
+Studentų rūšiavimas į dvi grupes: 2,18196 sekundės.
+Naujų failų sukūrimas: 0,0006989 sekundės.
+
+std::deque:
+
+Duomenų nuskaitymas iš failų: 4,16784 sekundės.
+Studentų rūšiavimas į dvi grupes: 1,79232 sekundės.
+Naujų failų sukūrimas: 0,0007492 sekundės.
+
+Išvada, kad std::vector yra greitesnis už std::list ir std::deque. std::list rušiavimo greitis buvo lėtesnis už std::deque. 
