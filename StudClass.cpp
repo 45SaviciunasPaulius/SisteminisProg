@@ -120,6 +120,9 @@ void Skaitymas(string file) {
 
 
 	vector<double> paz;
+	vector<Studentai> vargsiukai;
+	vector<Studentai> kietiakai;
+
 	paz.reserve(100);
 	string line, word;
 	stringstream ss;
@@ -146,20 +149,18 @@ void Skaitymas(string file) {
 			}
 
 			Studentai a(words[0], words[1], paz, paz.size(), egzaminas);
+			
 			double galutinis = a.Galutinis(paz);
 			double mediana = a.Mediana(paz);
 
+
 			if (galutinis >= 5) {
-				Moks << setw(15) << left << words[0];
-				Moks << setw(18) << left << words[1];
-				Moks << setw(18) << setprecision(3) << galutinis;
-				Moks << setprecision(3) << mediana << '\n';
+				kietiakai.push_back(a);
+				Moks << a;
 			}
 			else {
-				Nemoks << setw(15) << left << words[0];
-				Nemoks << setw(18) << left << words[1];
-				Nemoks << setw(18) << setprecision(3) << galutinis;
-				Nemoks << setprecision(3) << mediana << '\n';
+				vargsiukai.push_back(a);
+				Nemoks << a;
 			}
 		}
 		else FLine = false;
